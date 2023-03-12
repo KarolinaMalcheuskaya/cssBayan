@@ -2,39 +2,54 @@
     box-sizing: border-box;
 }
 
-body {
+.app {
     font-family: sans-serif;
     font-size: 20px;
     font-weight: 800;
     color: rgba(74, 49, 200, 0.87);
     background:azure;
-    padding: 30px;
+    display: flex;
+    justify-content: center;
+    max-width: 1920px;
 }
 
 h1{
     color: black;
+    border-bottom: blanchedalmond solid 1px;
+}
+
+#center {
+    width: 80%;
+}
+
+#left {
+    width: 10%;
+}
+
+#right {
+    width: 10%;
 }
 
 .container {
     margin: 0 auto;
-    max-width: 1920px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: all 1s linear 0s;
 }
 
-.plus_image {
+.content {
+    border-bottom: blanchedalmond solid 1px;
+    padding: 0 5px;
+    transition: all 1s linear 0s;
+}
+
+.plus_image, .plus_image_one {
     width: 18px;
     height: 18px;
     float:right;
     margin-top: 4px;
     display: none;
-}
-
-.plus_image_one {
-    width: 18px;
-    height: 18px;
-    float:right;
-    margin-top: 4px;
-    display: block;
-    transform: rotate(45deg);
 }
 
 figure {
@@ -57,16 +72,29 @@ figure {
 
 .container:hover {
     color: black;
+    cursor: pointer;
+    transition: all 1s linear 0s;
+}
+
+.container:hover .plus_image_one {
+    display: block;
+    transform: rotate(45deg);
+    transition: all 1s linear 0s;
 }
 
 .container:hover .plus_image{
     display: block;
+    transition: all 1s linear 0s;
 }
 
 .content:hover .plus_image {
+    display: block;
     transform: rotate(45deg);
+    transition: all 1s linear 0s;
 }
 
 .content:hover .image {
     display: block;
+    transition: all 1s linear 0s;
 }
+
